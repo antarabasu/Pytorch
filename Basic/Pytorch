@@ -1,0 +1,43 @@
+import torch
+
+
+# Returns a tensor filled with random numbers from a uniform distribution on the interval [0,1)
+
+print(torch.rand(4))
+print(torch.rand(2, 3))
+
+/*
+tensor([0.9677, 0.6070, 0.0012, 0.5608])
+tensor([[0.0240, 0.7358, 0.9551],
+        [0.6437, 0.2707, 0.9007]])
+        
+ */      
+        
+#Returns a tensor filled with random integers generated uniformly between low (inclusive) and high (exclusive).
+
+print(torch.randint(3, 5, (3,)))
+print(torch.randint(10, (2, 2)))
+print(torch.randint(3, 10, (2, 2)))
+
+
+/*
+tensor([3, 3, 3])
+tensor([[3, 5],
+        [3, 0]])
+tensor([[5, 4],
+        [3, 9]])
+        */
+        
+        
+# Returns a 1-D tensor of size 
+# ⌈end−start|/step  with values from the interval [start, end) taken with common difference step beginning from start.
+
+print(torch.arange(5))
+print(torch.arange(1, 4))
+print(torch.arange(1, 2.5, 0.5))
+
+/*
+tensor([0, 1, 2, 3, 4])
+tensor([1, 2, 3])
+tensor([1.0000, 1.5000, 2.0000])
+*/
