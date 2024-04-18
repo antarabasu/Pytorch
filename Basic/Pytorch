@@ -41,3 +41,68 @@ tensor([0, 1, 2, 3, 4])
 tensor([1, 2, 3])
 tensor([1.0000, 1.5000, 2.0000])
 */
+
+ones = torch.zeros(2, 2) + 1
+twos = torch.ones(2, 2) * 2
+threes = (torch.ones(2, 2) * 7 - 1) / 2
+fours = twos ** 2
+sqrt2s = twos ** 0.5
+
+print(ones)
+tensor([[1., 1.],
+        [1., 1.]])
+
+print(twos)
+tensor([[2., 2.],
+        [2., 2.]])
+        
+print(threes)
+tensor([[3., 3.],
+        [3., 3.]])   
+
+print(fours)
+tensor([[4., 4.],
+        [4., 4.]])        
+
+print(sqrt2s)
+tensor([[1.4142, 1.4142],
+        [1.4142, 1.4142]])
+        
+        
+powers2 = twos ** torch.tensor([[1, 2], [3, 4]])
+print(powers2)
+tensor([[ 2.,  4.],
+        [ 8., 16.]])
+        
+        
+fives = ones + fours
+print(fives)
+tensor([[5., 5.],
+        [5., 5.]])
+        
+        
+        
+dozens = threes * fours
+print(dozens)
+tensor([[12., 12.],
+        [12., 12.]])
+        
+        
+rand = torch.rand(2, 4)
+doubled = rand * (torch.ones(1, 4) * 2)
+
+print(rand)
+
+tensor([[0.6146, 0.5999, 0.5013, 0.9397],
+        [0.8656, 0.5207, 0.6865, 0.3614]])
+
+print(doubled)
+
+tensor([[1.2291, 1.1998, 1.0026, 1.8793],
+        [1.7312, 1.0413, 1.3730, 0.7228]])
+        
+rand *2 also will give the same result => 
+tensor([[1.2291, 1.1998, 1.0026, 1.8793],
+        [1.7312, 1.0413, 1.3730, 0.7228]])
+        
+        
